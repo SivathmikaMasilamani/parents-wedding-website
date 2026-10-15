@@ -1,0 +1,856 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #16070d;
+    color: #f8e8df;
+    line-height: 1.8;
+}
+
+
+/* ================= GENERAL ================= */
+
+section {
+    min-height: 100vh;
+    padding: 100px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.chapter-heading {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.chapter-number {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: #d99aaa;
+    margin-bottom: 20px;
+}
+
+.chapter-heading h2 {
+    font-size: clamp(42px, 7vw, 85px);
+    line-height: 1.1;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.chapter-heading h2 span {
+    color: #e9a9b9;
+    font-style: italic;
+}
+
+.chapter-heading p {
+    color: #d7bfc5;
+    font-size: 18px;
+}
+
+.small-title {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #e6a9b8;
+    margin-bottom: 15px;
+}
+
+.single-photo {
+    width: 100%;
+    max-width: 650px;
+    margin: 40px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0,0,0,.5);
+}
+
+.single-photo img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+
+/* ================= OPENING ================= */
+
+.opening {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4a1728 0%,
+            #210a13 45%,
+            #100308 100%
+        );
+}
+
+.opening::before {
+    content: "♥";
+    position: absolute;
+    font-size: 400px;
+    color: rgba(255,255,255,.025);
+}
+
+.opening-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: fadeUp 1.5s ease;
+}
+
+.top-text {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 6px;
+    color: #dca4b2;
+    margin-bottom: 30px;
+}
+
+.opening h1 {
+    font-size: clamp(55px, 10vw, 120px);
+    font-weight: normal;
+    line-height: 1;
+}
+
+.opening h1 span {
+    color: #e994aa;
+}
+
+.opening .line {
+    width: 100px;
+    height: 1px;
+    background: #d991a5;
+    margin: 35px auto;
+}
+
+.anniversary-title {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: #e6b5c1;
+}
+
+.opening-message {
+    font-size: 23px;
+    margin: 35px 0;
+    color: #f3dfe4;
+}
+
+.opening button {
+    border: 1px solid #d994a8;
+    background: transparent;
+    color: #f7dce3;
+    padding: 17px 35px;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.opening button:hover {
+    background: #d994a8;
+    color: #18070d;
+    transform: translateY(-4px);
+}
+
+
+/* ================= CHAPTER 1 ================= */
+
+.chapter-one {
+    background:
+        linear-gradient(
+            180deg,
+            #18070d,
+            #260b15
+        );
+}
+
+.two-lives {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.life-card {
+    flex: 1;
+    max-width: 380px;
+    padding: 55px 35px;
+    text-align: center;
+    border: 1px solid rgba(230,170,185,.2);
+    border-radius: 30px;
+    background: rgba(255,255,255,.025);
+}
+
+.life-card .icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.life-card h3 {
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.life-card h4 {
+    font-size: 28px;
+    color: #e5a5b6;
+    font-weight: normal;
+}
+
+.life-card p {
+    color: #cbb4bb;
+}
+
+.life-card .small {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.heart {
+    font-size: 45px;
+    color: #e58ca3;
+}
+
+.story-box {
+    max-width: 750px;
+    margin: 100px auto 0;
+    text-align: center;
+}
+
+.story-box p {
+    margin-bottom: 20px;
+    color: #d5c0c6;
+}
+
+.story-box h3 {
+    margin-top: 35px;
+    font-size: 28px;
+    color: #edb1c0;
+    font-weight: normal;
+}
+
+
+/* ================= CHAPTER 2 ================= */
+
+.chapter-two {
+    background: #210a12;
+}
+
+.paati-section {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.photo-card {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,.5);
+}
+
+.photo-card img {
+    width: 100%;
+    display: block;
+}
+
+.paati-content h3 {
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.paati-content p {
+    color: #d6c0c6;
+    margin-bottom: 18px;
+}
+
+.memory-section {
+    max-width: 850px;
+    margin: 130px auto 0;
+    text-align: center;
+}
+
+.memory-section h3 {
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.memory-section p {
+    color: #d7c0c7;
+    margin: 20px auto;
+    max-width: 650px;
+}
+
+.memory-section h4 {
+    font-size: 30px;
+    color: #edabbc;
+    margin-top: 30px;
+}
+
+
+/* ================= ENGAGEMENT ================= */
+
+.engagement-section {
+    background: #17070d;
+}
+
+.gallery {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-card {
+    border-radius: 25px;
+    overflow: hidden;
+    background: #100509;
+    min-height: 300px;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.quote {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.quote p {
+    font-size: 30px;
+    color: #e7a8b7;
+    font-style: italic;
+}
+
+
+/* ================= WEDDING ================= */
+
+.wedding-section {
+    background:
+        radial-gradient(
+            circle at center,
+            #451526,
+            #19070e 65%
+        );
+}
+
+.date-card {
+    max-width: 650px;
+    margin: 0 auto 70px;
+    padding: 50px;
+    text-align: center;
+    border: 1px solid rgba(240,180,195,.25);
+    border-radius: 30px;
+}
+
+.date-card p {
+    font-family: Arial, sans-serif;
+    letter-spacing: 4px;
+    color: #dca3b3;
+}
+
+.date-card h3 {
+    font-size: 65px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.date-card span {
+    color: #ceb7bd;
+}
+
+.wedding-gallery {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 20px;
+}
+
+.wedding-photo {
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.wedding-photo.large {
+    grid-row: span 2;
+}
+
+.wedding-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.wedding-message {
+    text-align: center;
+    margin: 90px auto;
+}
+
+.wedding-message p {
+    color: #d3bcc3;
+    font-size: 18px;
+}
+
+.wedding-message h3 {
+    font-size: 50px;
+    font-weight: normal;
+    color: #ecaabc;
+    margin: 20px 0;
+}
+
+.journey-box {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.journey-box p {
+    color: #d2bbc2;
+}
+
+.journey-box h3 {
+    color: #e9a8b8;
+    margin-top: 25px;
+}
+
+
+/* ================= CHAPTER 4 ================= */
+
+.chapter-four {
+    background: #210a12;
+}
+
+.baby-section {
+    max-width: 750px;
+    margin: 0 auto 140px;
+    text-align: center;
+}
+
+.baby-section h3 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.baby-section p:not(.small-title) {
+    color: #d5bec5;
+    margin: 15px auto;
+    max-width: 650px;
+}
+
+.memory-dark {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 70px 30px;
+    background: rgba(0,0,0,.2);
+    border-radius: 35px;
+}
+
+.memory-dark h3 {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.memory-dark p {
+    color: #d1bac1;
+    margin: 15px auto;
+}
+
+.bike-number {
+    font-family: Arial, sans-serif;
+    font-size: 80px;
+    letter-spacing: 15px;
+    color: #e5a1b2;
+    margin: 25px 0;
+}
+
+.brother-section {
+    max-width: 750px;
+    margin: 140px auto 0;
+    text-align: center;
+}
+
+.brother-section h3 {
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.brother-section p {
+    color: #d5bec5;
+}
+
+
+/* ================= STRUGGLE ================= */
+
+.struggle-section {
+    background:
+        linear-gradient(
+            180deg,
+            #17070c,
+            #270a14
+        );
+}
+
+.struggle-section > .single-photo {
+    max-width: 700px;
+}
+
+.work-timeline {
+    max-width: 900px;
+    margin: 100px auto;
+
+    display: grid;
+    gap: 20px;
+}
+
+.work-card {
+    padding: 35px;
+    border-left: 2px solid #d68da1;
+    background: rgba(255,255,255,.025);
+}
+
+.work-card span {
+    color: #e2a0b1;
+    font-family: Arial, sans-serif;
+}
+
+.work-card h3 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.work-card p {
+    color: #cdb7bd;
+}
+
+.sacrifice-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 70px 30px;
+}
+
+.sacrifice-box h3 {
+    font-size: 48px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.sacrifice-box p {
+    color: #d0b9c0;
+}
+
+.sacrifice-box h4 {
+    color: #e6a4b5;
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: normal;
+}
+
+
+/* ================= GROWTH ================= */
+
+.growth-section {
+    background: #1b080f;
+}
+
+.car-story {
+    max-width: 750px;
+    margin: 0 auto 150px;
+    text-align: center;
+}
+
+.car-story h3 {
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.car-story p:not(.small-title) {
+    color: #d3bcc3;
+    margin: 20px auto;
+    max-width: 650px;
+}
+
+.education-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 70px 40px;
+    border: 1px solid rgba(220,160,175,.2);
+    border-radius: 35px;
+}
+
+.education-box h3 {
+    font-size: 45px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.education-box p {
+    color: #d2bbc2;
+    margin: 18px auto;
+}
+
+.education-box strong {
+    color: #e8a7b7;
+}
+
+
+/* ================= FINAL ================= */
+
+.final-section {
+    min-height: 100vh;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4c172a,
+            #1a060d 70%
+        );
+
+    padding-bottom: 0;
+}
+
+.final-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.final-content h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+.final-content h2 span {
+    color: #e7a3b4;
+    font-style: italic;
+}
+
+.final-heart {
+    font-size: 60px;
+    color: #ed8fa8;
+    margin: 40px 0;
+    animation: heartbeat 1.5s infinite;
+}
+
+.final-message {
+    max-width: 650px;
+    margin: 30px auto;
+    color: #e0cbd0;
+    font-size: 20px;
+}
+
+.divider {
+    color: #e395aa;
+    letter-spacing: 10px;
+    margin: 60px 0;
+}
+
+.final-content h3 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 15px;
+}
+
+.children {
+    margin-top: 70px;
+    color: #d5bec5;
+}
+
+.children strong {
+    color: #e9a7b7;
+    font-size: 25px;
+}
+
+.dream-box {
+    max-width: 700px;
+    margin: 120px auto;
+    padding: 60px 35px;
+    border: 1px solid rgba(225,160,177,.25);
+    border-radius: 35px;
+}
+
+.dream-box h3 {
+    font-size: 45px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.dream-box p:last-child {
+    color: #d4bdc4;
+}
+
+.anniversary-ending {
+    padding: 100px 20px;
+    background: rgba(0,0,0,.2);
+}
+
+.anniversary-ending > p:first-child {
+    letter-spacing: 6px;
+    color: #e4a4b4;
+    font-family: Arial, sans-serif;
+}
+
+.anniversary-ending h2 {
+    font-size: clamp(55px, 8vw, 100px);
+    font-weight: normal;
+    line-height: 1;
+    margin: 35px 0;
+}
+
+.anniversary-ending h3 {
+    font-size: 35px;
+    font-weight: normal;
+    color: #edabba;
+}
+
+.anniversary-ending p:last-child {
+    margin-top: 30px;
+    color: #d1bbc2;
+}
+
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.12);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .two-lives {
+        flex-direction: column;
+    }
+
+    .heart {
+        transform: rotate(90deg);
+    }
+
+    .paati-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .wedding-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .wedding-photo.large {
+        grid-row: auto;
+    }
+
+    .wedding-photo {
+        min-height: 300px;
+    }
+
+    .date-card h3 {
+        font-size: 45px;
+    }
+
+    .chapter-heading h2 {
+        font-size: 50px;
+    }
+
+    .bike-number {
+        font-size: 55px;
+    }
+
+}
+/* PHOTO VISIBILITY FIX */
+img {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.photo-card img,
+.gallery img,
+.story-image img,
+.image-box img {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
